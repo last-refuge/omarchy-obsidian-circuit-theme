@@ -31,3 +31,15 @@ The patch passes a dry run with `--fuzz=0`, applies exactly to the base, produce
 The gallery copy is 1200 × 675, WebP quality 80, stripped of metadata, and 59,936 bytes. The original-resolution screenshot is also stripped of metadata. The temporary preview windows and display were removed after capture.
 
 Gallery instructions checked: https://github.com/omacom/omarchy-site#adding-your-theme
+
+## Registry submission validation
+
+The unmodified official `scripts/submit.ts` from `omacom/omarchy-theme-registry` commit `d0d1a9423ced911f173288b56193c4851109f9f6` validated the published theme at commit `e07a091e58d0ba24b18f253c31729e38c8091a93` with **zero errors and zero warnings**. It generated the entry for install name `obsidian-circuit`. The generated JSON also passes the registry's Prettier check.
+
+The validator confirms a marketplace install includes the palette, all four wallpapers, root preview, `shell.toml`, README, and license. Organization ownership could not be verified through public membership; the submission report discloses this for maintainer review. The entry and full report are in [registry PR #202](https://github.com/omacom/omarchy-theme-registry/pull/202).
+
+## Website gallery validation
+
+[Gallery PR #683](https://github.com/omacom/omarchy-site/pull/683) adds the screenshot and alphabetical source entry. The site imports Obsidian Circuit exactly once between Nujabes and Oligarchy. The built page contains a clickable card linking to this repository, and its copied image matches the verified WebP byte-for-byte.
+
+Local checks passed: `npm ci`, `npm run port`, `npm run lint`, `npm run typecheck`, `npm test`, `bin/build-news`, `npm run build`, and `npm run parity`. Tests ran with Node 24.22.2 and Python 3.13.18: 66 JavaScript/TypeScript tests and 50 Python tests passed. Parity verified all 8,900 addresses respond and all 2,525 passthrough files are byte-identical. These are local results; upstream review and CI are separate.

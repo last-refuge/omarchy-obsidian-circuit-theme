@@ -2,6 +2,16 @@
 
 The theme repository is the installation source. The gallery listing is a separate pull request to [omacom/omarchy-site](https://github.com/omacom/omarchy-site#adding-your-theme).
 
+## Submitted on 2026-11-03
+
+- [Registry submission issue #201](https://github.com/omacom/omarchy-theme-registry/issues/201)
+- [Registry pull request #202](https://github.com/omacom/omarchy-theme-registry/pull/202)
+- [Website gallery pull request #683](https://github.com/omacom/omarchy-site/pull/683)
+
+The official registry submission validator passed with zero errors and zero warnings. The registry entry was generated with the unmodified official submission script and submitted directly as a PR: GitHub omitted the `submission` label from the API-created issue, and the submitting account cannot apply labels upstream. The report is included in the PR. The repository is owned by the `last-refuge` organization; public organization membership did not verify the submitting account's ownership, so that check needs maintainer review.
+
+The gallery submission passed lint, type checking, all 116 tests, the full build, and parity checks locally. Both pull requests are awaiting maintainer review. The instructions below remain as reference; these submissions do not need to be opened again.
+
 ## Prepared files
 
 - Root `preview.png`: a real 16:9 desktop capture with a terminal and an editor, using the Obsidian Circuit wallpaper and theme.
