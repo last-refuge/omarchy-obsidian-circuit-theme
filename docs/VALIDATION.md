@@ -26,8 +26,8 @@ The patch passes a dry run with `--fuzz=0`, applies exactly to the base, produce
 
 ## Preview
 
-`preview.png` is a 1920 × 1080 capture from a temporary virtual display in a real running Omarchy/Hyprland session. The display contained only a terminal showing theme demonstration content and Neovim showing this repository's palette file. No personal windows, cursor, or notification are present. The screenshot includes the optional dock styling.
+`preview.png` is a 1920 × 1080 capture from a temporary virtual display in a real running Omarchy/Hyprland session. The display contained only a terminal showing theme demonstration content and Neovim showing this repository's palette file. No personal windows or notifications are present. Neovim is focused to show the theme's orange active-window border. The screenshot includes the optional dock styling.
 
-The gallery copy is 1200 × 675, WebP quality 80, stripped of metadata, and 59,840 bytes. The original-resolution screenshot is also stripped of metadata. The temporary preview windows and display were removed after capture.
+The gallery copy is 1200 × 675, WebP quality 80, stripped of metadata, and 59,944 bytes. The original-resolution screenshot is also stripped of metadata. The temporary preview windows and display were removed after capture.
 
 Gallery instructions checked: https://github.com/omacom/omarchy-site#adding-your-theme
