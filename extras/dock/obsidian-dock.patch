@@ -1,0 +1,74 @@
+--- a/DockWindow.qml
++++ b/DockWindow.qml
+@@ -47,7 +47,7 @@
+   readonly property bool tucked: autohide && !(revealed || menuOpen || dragging || insertIndex >= 0)
+   readonly property bool contentShown: shown && !tucked
+ 
+-  readonly property int gap: Style.spacing.xs
++  readonly property int gap: Style.space(10)
+   readonly property int iconSize: Math.round(36 * Style.fontScale)
+   // Each app has a square slot with its icon in the middle, and the slots run
+   // straight to the edge of the dock.
+@@ -296,6 +296,14 @@
+     // frame back instead of being uploaded again.
+     opacity: window.shown ? 1 : 0
+ 
++    // Obsidian Circuit: an opaque, borderless graphite plate.
++    Rectangle {
++      anchors.fill: parent
++      z: -1
++      radius: Style.space(12)
++      color: Commons.Color.popups.background
++    }
++
+     HoverHandler {
+       id: bodyHover
+       onHoveredChanged: if (!hovered && window.autohide) hideTimer.restart()
+@@ -335,6 +343,15 @@
+     width: window.slotSize
+     height: window.slotSize
+ 
++    Rectangle {
++      anchors.fill: parent
++      anchors.margins: Style.space(4)
++      radius: Style.space(8)
++      color: Util.alpha(Commons.Color.accent, slot.pressed ? 0.22 : (slot.hovered ? 0.12 : 0))
++      border.width: slot.hovered ? 1 : 0
++      border.color: Util.alpha(Commons.Color.accent, 0.4)
++    }
++
+     MouseArea {
+       id: mouse
+       anchors.fill: parent
+@@ -395,7 +412,7 @@
+             width: parent.square
+             height: parent.square
+             radius: Math.max(1, Math.round(parent.square * 0.2))
+-            color: Commons.Color.bar.text
++            color: Commons.Color.accent
+           }
+         }
+       }
+@@ -517,6 +534,22 @@
+       Behavior on scale { NumberAnimation { duration: Style.duration(120); easing.type: Easing.OutCubic } }
+     }
+ 
++    // An orange marker identifies running apps without changing their icons.
++    Rectangle {
++      visible: appSlot.windowCount > 0 || appSlot.launching
++      width: window.vertical ? Style.space(3) : Style.space(14)
++      height: window.vertical ? Style.space(14) : Style.space(3)
++      radius: Style.space(1.5)
++      x: window.vertical ? (window.position === "left" ? parent.width - width - Style.space(2) : Style.space(2)) : (parent.width - width) / 2
++      y: window.vertical ? (parent.height - height) / 2 : (window.position === "top" ? parent.height - height - Style.space(2) : Style.space(2))
++      color: Commons.Color.accent
++      opacity: appSlot.launching ? appSlot.pulse : 1
++      transform: Translate {
++        x: window.vertical ? 0 : appSlot.displayedShift
++        y: window.vertical ? appSlot.displayedShift : 0
++      }
++    }
++
+     // With animations off it holds still rather than spinning through
+     // zero-length steps.
+     SequentialAnimation {
