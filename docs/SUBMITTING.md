@@ -36,4 +36,4 @@ Suggested PR body:
 
 The official [theme registry](https://github.com/omacom/omarchy-theme-registry#submit-your-theme) also documents an issue-based submission flow. Its [submission form](https://github.com/omacom/omarchy-theme-registry/issues/new?template=submit-theme.yml) accepts the public repository URL, runs automated validation, and opens a listing PR on success. If validation needs changes, fix the theme repository and comment `/recheck` on the issue.
 
-The root palette, backgrounds, preview, README, and license are arranged to support that validation. Optional patch/documentation files may be ignored by theme installers and are not automatically executed. Listing in either gallery does not make the theme a bundled Omarchy default.
+The root palette, backgrounds, preview, README, and license are arranged to support that validation. Listing in either gallery does not make the theme a bundled Omarchy default.
