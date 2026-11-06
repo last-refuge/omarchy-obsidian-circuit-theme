@@ -20,9 +20,11 @@ This is a staging/template check, not a claim that every supported application h
 
 ## Preview
 
-`preview.png` is a 1920 × 1080 capture from a temporary virtual display in a real running Omarchy/Hyprland session. The display contained only a terminal showing theme demonstration content and Neovim showing this repository's palette file. No personal windows, mouse pointer, or notifications are present. Neovim is focused to show the theme's orange active-window border. The dock in this capture has personal styling that is not part of the theme.
+`preview.png` is a metadata-stripped 1920 × 1080 capture from a temporary virtual output in a separate Hyprland 0.56.2 session running the packaged Omarchy 4.5.0-3 shell. The session used a Bubblewrap-isolated home, runtime directory, and D-Bus. The packaged `omarchy.bar` and `omarchy.dock` plugins were selected; no personal dock clone or dock patch was loaded. The user's live shell configuration, dock clone, workspace layouts, theme files, and background link were unchanged, verified against a recorded baseline.
 
-The gallery copy is 1200 × 675, WebP quality 80, stripped of metadata, and 59,936 bytes. The original-resolution screenshot is also stripped of metadata. The temporary preview windows and display were removed after capture.
+The display contained only a Foot terminal showing public theme demonstration content and Neovim showing the theme's `colors.toml`. It uses `backgrounds/1-obsidian-circuit.webp`, with Neovim focused to show the orange active-window border. The stock dock has its normal app-grid icon and running-app indicator, without the removed graphite plate. No mouse pointer, notifications, personal windows, or private information are present. The image was visually inspected after capture. The temporary compositor, virtual output, shell, and demonstration processes were stopped afterwards.
+
+The gallery copy is 1200 × 675, WebP quality 80, stripped of metadata, and 50,646 bytes. It is copied byte-for-byte to the gallery PR's `assets/themes/obsidian-circuit.webp`.
 
 Gallery instructions checked: https://github.com/omacom/omarchy-site#adding-your-theme
 
