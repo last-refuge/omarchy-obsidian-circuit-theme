@@ -4,7 +4,7 @@ A dark [Omarchy](https://omarchy.org/) theme with graphite surfaces, bright oran
 
 ![Obsidian Circuit on an Omarchy desktop](preview.png)
 
-Desktop preview showing the orange active-window border. The dock in this capture has personal styling that is not part of the theme.
+Desktop preview showing the orange active-window border.
 
 The palette builds on Omarchy's **Starship** theme. Obsidian Circuit adds custom shell surfaces and a collection of AI-generated science-fiction artwork. The top bar has a solid near-black background with no edge border. Menus use charcoal surfaces and orange selection accents.
 
